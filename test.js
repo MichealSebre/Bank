@@ -2,7 +2,7 @@
 
 
 
-describe("account", function() {
+describe("Test Case For Account Class", function() {
 
     const account = new Account(Bank.nextNumber);
 
