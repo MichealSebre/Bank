@@ -1,7 +1,5 @@
 "use strict";
-/* global describe */
-/* global it */
-/* global assert */
+
 
 
 describe("account", function() {
