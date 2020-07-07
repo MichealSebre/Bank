@@ -6,24 +6,24 @@ describe("account", function() {
 
     const account = new Account(Bank.nextNumber);
 
-    it("throw an error when trying to deposit a negative value", function() {
+    it("Negative value deposit ", function() {
         assert.throw(() => account.deposit(-100), RangeError, "Deposit amount has to be greater than zero");
     });
 
-    it("deposit and get the deposited amount in the balance", function() {
+    it("Deposit and return Amount of Deposit", function() {
         account.deposit(100);
         assert.equal(100, account.getBalance());
     });
 
-    it("throw an error when trying to withdraw a negative value", function() {
+    it("Negative value withdraw", function() {
         assert.throw(() => account.withdraw(-100), RangeError, "Withdraw amount has to be greater than zero");
     });
 
-    it("throw an error when trying to withdraw a value greater than the balance", function() {
+    it("withdraw a value greater than the balance", function() {
         assert.throw(() => account.withdraw(200), Error, "Insufficient funds");
     });
 
-    it("returns the account in the correct string for printing", function() {
+    it("Returns the account in String", function() {
         assert.equal("Account 0: balance 100", account.toString());
     });
 
