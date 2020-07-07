@@ -7,7 +7,7 @@ describe("Test Case For Account Class", function() {
     const account = new Account(Bank.nextNumber);
 
     it("Negative value deposit ", function() {
-        assert.throw(() => account.deposit(-100), RangeError, "Deposit amount has to be greater than zero");
+        assert.throw(() => account.deposit(-100), RangeError, "Deposit amount Must be greater 0");
     });
 
     it("Deposit and return Amount of Deposit", function() {
@@ -16,11 +16,11 @@ describe("Test Case For Account Class", function() {
     });
 
     it("Negative value withdraw", function() {
-        assert.throw(() => account.withdraw(-100), RangeError, "Withdraw amount has to be greater than zero");
+        assert.throw(() => account.withdraw(-100), RangeError, "Withdraw amount must be greater 0");
     });
 
     it("withdraw a value greater than the balance", function() {
-        assert.throw(() => account.withdraw(200), Error, "Insufficient funds");
+        assert.throw(() => account.withdraw(200), Error, "Insufficient Amount");
     });
 
     it("Returns the account in String", function() {
